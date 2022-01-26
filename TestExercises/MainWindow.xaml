@@ -1,0 +1,21 @@
+﻿<Window x:Class="TestExercises.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="TestExcersise" Background="Gray" Height="527.797" Width="1033.39">
+    <Grid x:Name ="windowGrid" Loaded="windowGrid_Loaded">
+        <DataGrid x:Name="MyData" HorizontalAlignment="Left" Height="488" VerticalAlignment="Top" Width="564" MouseRightButtonDown="MyData_MouseRightButtonDown">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Binding="{ Binding Name }" Width="200"/>
+                <DataGridTextColumn Header="Среднее кол-во шагов" Binding="{ Binding Average }" Width="135"/>
+                <DataGridTextColumn Header="Лучший результат" Binding="{ Binding Best }" Width="110"/>
+                <DataGridTextColumn Header="Худший результат" Binding="{ Binding Worst }" Width="115"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</Window>
